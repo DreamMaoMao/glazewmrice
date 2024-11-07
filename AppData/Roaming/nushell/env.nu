@@ -111,19 +111,19 @@ $env.PROMPT_COMMAND = {
     let separator_color = (if (is-admin) { ansi light_red_bold } else { ansi light_green_bold })
     let path_segment = $"($path_color)($dir)"
     let shell_segment = $"(ansi red_bold)("<nu>")"
-    let extre_segment = $"(ansi yellow_bold)("\n╰─")"
-    
-    # let user = (whoami)
-    let user = "wrq" 
-    #let host = (hostname)
-    let host = "mywin"
+    let extra_segment = $"(ansi yellow_bold)("\n╰─")"
+
+    let user = (whoami)
+    #let user = "wrq" 
+    let host = (hostname)
+    #let host = "mywin"
     
     let decorde1_segment = $"(ansi yellow_bold)("╭─")"
     let user_segment = $"(ansi green_bold)($user)"
     let host_segment = $"(ansi green_bold)($host)"
 
 
-    $"($decorde1_segment)($user_segment)@($host_segment) ($path_segment) ($shell_segment) ($extre_segment)"
+    $"($decorde1_segment)($user_segment)@($host_segment) ($path_segment) ($shell_segment) ($extra_segment)"
 }
 $env.PROMPT_INDICATOR = {|| " " }
 $env.PROMPT_COMMAND_RIGHT = ""

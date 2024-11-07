@@ -58,3 +58,106 @@ ls
 yd 五彩缤纷的主题
 source ~/script/proxy.nu
 git clone https://github.com/DreamMaoMao/glazewmrice.git
+git -A .
+git add -A .
+lg
+cargo build --release
+source ~/script/proxy.nu
+git clone https://github.com/glze-io/glazewm
+git clone https://github.com/glze-io/glazewm.git
+git clone https://github.com/glzr-io/glazewm.git
+cd glazewm\
+cargo build --release
+./target/release/glazewm.exe
+bun run build
+git pull -f
+source ~/script/proxy.nu
+git push
+ls
+ll
+ls
+winfetch
+yd 现在我的glazewm和我以前的hyprland长得一模一了，哈哈
+yd 现在我的glazewm和我以前的hyprland长得一模一了哈哈
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+yd 最新的提交引入了一个bug,在切换工作区的时候，有时会让目标工作区的浏览器自动（全屏）最大化
+ls
+ll
+ls
+ll
+ls
+ls -l
+cd glazewm\
+cd test\
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+;s
+ls
+ll
+ls
+ll
+lls
+ls
+ll
+ls
+ll
+ls
+git symbolic-ref HEAD
+cd
+git symbolic-ref HEAD
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+lls
+ll
+ls
+ll
+ls
+yd extra
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+hostname
+whoami
+ls
+ll
+ls
+ll
+ls
+ll
+ls
