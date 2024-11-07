@@ -1,0 +1,23 @@
+lastupdatecheck: 0
+recentrepos:
+    - H:\wintile
+    - C:\Users\wuruq\refer\glazewm
+    - C:\Users\wuruq\test\glazewm
+    - C:\Users\wuruq\refer\AltSnap
+    - C:\Users\wuruq\mynote
+    - D:\tilewm\yazi
+    - D:\project\tacky-borders
+    - D:\project\glazems
+    - C:\Users\wuruq\AppData\Roaming\yazi\config\plugins\lastopen.yazi
+    - D:\project\rutoast
+startuppopupversion: 5
+lastversion: 0.44.1
+customcommandshistory: []
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 2
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

@@ -1,0 +1,16 @@
+[2m2024-11-05T06:11:05.584242Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'D:\\Program Files\\Clash for Windows\\Clash for Windows.exe'.\n\nError: Program path is not valid for command 'D:\\Program Files\\Clash for Windows\\Clash for Windows.exe'."
+[2m2024-11-05T09:01:41.972821Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[2].commands: unexpected argument found
+ at line 137 column 15
+[2m2024-11-05T09:33:51.724282Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general.startup_commands: unexpected argument found
+ at line 4 column 21
+[2m2024-11-07T02:29:22.628969Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general.startup_commands: unexpected argument found
+ at line 4 column 21
+[2m2024-11-07T04:24:41.224814Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T04:24:51.384053Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T04:25:54.514062Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T04:27:45.008188Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T04:35:52.074470Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T04:48:39.167967Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent.
+[2m2024-11-07T07:23:50.886779Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-07T08:54:50.619642Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general.startup_commands: unexpected argument found
+ at line 4 column 21

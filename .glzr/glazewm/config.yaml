@@ -1,0 +1,364 @@
+general:
+  # Commands to run when the WM has started (e.g. to run a script or launch
+  # another application). Here we are running a batch script to start Zebar.
+  startup_commands: ['shell-exec --hide-window powershell %HOMEPATH%/.glzr/start.ps1']
+
+  # Commands to run just before the WM is shutdown.
+  # Example: The below command kills Zebar.
+  shutdown_commands: ['shell-exec --hide-window powershell %HOMEPATH%/.glzr/exit.ps1']
+
+  # Commands to run after the WM config is reloaded.
+  config_reload_commands: []
+
+  # Whether to automatically focus windows underneath the cursor.
+  focus_follows_cursor: false
+
+  # Whether to switch back and forth between the previously focused
+  # workspace when focusing the current workspace.
+  toggle_workspace_on_refocus: false
+
+  cursor_jump:
+    # Whether to automatically move the cursor on the specified trigger.
+    enabled: true
+
+    # Trigger for cursor jump:
+    # - 'monitor_focus': Jump when focus changes between monitors.
+    # - 'window_focus': Jump when focus changes between windows.
+    trigger: 'monitor_focus'
+
+gaps:
+  # Gap between adjacent windows.
+  inner_gap: '10px'
+
+  # Gap between windows and the screen edge.
+  outer_gap:
+    top: '48px'
+    right: '10px'
+    bottom: '10px'
+    left: '10px'
+
+window_effects:
+  # Visual effects to apply to the focused window.
+  focused_window:
+    hide_title_bar:
+      enabled: true
+    # Highlight the window with a colored border.
+    # ** Exclusive to Windows 11 due to API limitations.
+    border:
+      enabled: false
+      color: '#ca91ff'
+
+  # Visual effects to apply to non-focused windows.
+  other_windows:
+    hide_title_bar:
+      enabled: true
+    border:
+      enabled: false
+      color: '#a1a1a1'
+
+window_behavior:
+  # New windows are created in this state whenever possible.
+  # Allowed values: 'tiling', 'floating'.
+  initial_state: 'tiling'
+
+  # Sets the default options for when a new window is created. This also
+  # changes the defaults for when the state change commands, like
+  # `set-floating`, are used without any flags.
+  state_defaults:
+    floating:
+      # Whether to center floating windows by default.
+      centered: false
+
+      # Whether to show floating windows as always on top.
+      shown_on_top: true
+
+    fullscreen: # Maximize the window if possible. If the window doesn't have a maximize button, then it'll be fullscreen'ed normally instead. maximized: false
+      # Whether to show fullscreen windows as always on top.
+      maximized: true
+      shown_on_top: true
+
+workspaces:
+  - name: '1'
+  - name: '2'
+  - name: '3'
+  - name: '4'
+  - name: '5'
+  - name: '6'
+  - name: '7'
+  - name: '8'
+  - name: '9'
+
+window_rules:
+  - commands: ['ignore']
+    match:
+      # Ignores any Zebar windows.
+      - window_process: { equals: 'zebar' }
+
+      # Ignores picture-in-picture windows for browsers.
+      - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
+        window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
+
+      # Ignore rules for various 3rd-party apps.
+      - window_process: { equals: 'PowerToys.PowerAccent' }
+      - window_process: { equals: 'keyviz' }
+      - window_process: { equals: 'Lively' }
+        window_class: { regex: 'HwndWrapper*' }
+      - window_process: { regex: 'uTools' }
+      - window_title: { regex: 'QQEdit' }
+      - window_title: { regex: '网易云音乐 安装' }
+      - window_process: { regex: 'cloudmusic' }
+        window_title: { regex: '正在安装' }
+      - window_process: { equals: 'Wiz' }
+        window_class: { regex: 'PerryShadowWnd' }
+
+  - commands: ["set-floating --centered",]
+    match:
+      - window_title: { regex: '任务管理器' }
+      - window_title: { regex: 'qxdrag' }
+        window_process: {regex: 'python'}
+      - window_title: { regex: '云视频' }
+      - window_process: { regex: 'aDrive' }
+      - window_title: { equals: 'Clash Verge' }
+      - window_title: { regex: '应用安装程序' }
+      - window_title: { regex: '新建任务面板' }
+      - window_title: { equals: 'Translate' }
+      - window_process: { regex: 'DownKyi' }
+      - window_process: { regex: 'CHXSmartScreen' }
+      - window_title: { regex: '图片查看器' }
+        window_process: {regex: 'QQ'}
+      - window_title: { regex: '设置' }
+        window_process: {regex: 'QQ'}
+      - window_title: { regex: '进度' }
+      - window_title: { regex: 'Choose your Space' }
+      - window_title: { regex: '首选项' }
+      - window_title: { regex: '视频播放器' }
+        window_process: {regex: 'QQ'}
+      - window_title: { regex: 'SMPlayer - 文件属性' }
+
+
+  - commands: ["set-floating --centered --width='1500px' --height='900px'"]
+    match:
+      - window_process: { regex: 'cloudmusic|QuarkCloudDrive' }
+
+  - commands: ["move --workspace 2","focus --workspace 2"]
+    match:
+      - window_process: { regex: 'Weixin' }
+  - commands: ["move --workspace 2","focus --workspace 2"]
+    match:
+      - window_process: { regex: 'QQ' }
+  - commands: ["move --workspace 4","focus --workspace 4"]
+    match:
+      - window_process: { regex: 'chrome' }
+  - commands: ["move --workspace 5","focus --workspace 5"]
+    match:
+      - window_process: { regex: 'cloudmusic' }
+  - commands: ["move --workspace 6","focus --workspace 6"]
+    match:
+      - window_process: { regex: 'obs64' }
+  - commands: ["move --workspace 7","focus --workspace 7"]
+    match:
+      - window_process: { regex: 'QuarkCloudDrive' }
+  - commands: ["move --workspace 8","focus --workspace 8",]
+    match:
+      - window_process: { regex: 'DownKyi' }
+
+binding_modes:
+  # When enabled, the focused window can be resized via arrow keys or HJKL.
+  - name: 'resize'
+    keybindings:
+      - commands: ['resize --width -1%']
+        bindings: ['h', 'left']
+      - commands: ['resize --width +1%']
+        bindings: ['l', 'right']
+      - commands: ['resize --height +1%']
+        bindings: ['k', 'up']
+      - commands: ['resize --height -1%']
+        bindings: ['j', 'down']
+      # Press enter/escape to return to default keybindings.
+      - commands: ['wm-disable-binding-mode --name resize']
+        bindings: ['escape', 'enter']
+
+  # When enabled, all keybindings are disabled except for alt+shift+p which
+  # returns to default keybindings.
+  - name: 'pause'
+    keybindings:
+      - commands: ['wm-disable-binding-mode --name pause']
+        bindings: ['alt+shift+p']
+
+keybindings:
+  # Shift focus in a given direction.
+  - commands: ['focus --direction left']
+    bindings: ['alt+left']
+  - commands: ['focus --direction right']
+    bindings: ['alt+right']
+  - commands: ['focus --direction up']
+    bindings: ['alt+up']
+  - commands: ['focus --direction down']
+    bindings: ['alt+down']
+
+  # Move focused window in a given direction.
+  - commands: ['move --direction left']
+    bindings: ['LWin+shift+left']
+  - commands: ['move --direction right']
+    bindings: ['LWin+shift+right']
+  - commands: ['move --direction up']
+    bindings: ['LWin+shift+up']
+  - commands: ['move --direction down']
+    bindings: ['LWin+shift+down']
+
+  # Resize focused window by a percentage or pixel amount.
+  # - commands: ['resize --width -1%']
+  #   bindings: ['alt+ctrl+left']
+  # - commands: ['resize --width +1%']
+  #   bindings: ['alt+ctrl+right']
+  # - commands: ['resize --height -1%']
+  #   bindings: ['alt+ctrl+up']
+  # - commands: ['resize --height +1%']
+  #   bindings: ['alt+ctrl+down']
+
+  # As an alternative to the resize keybindings above, resize mode enables
+  # resizing via arrow keys or HJKL. The binding mode is defined above with
+  # the name 'resize'.
+  - commands: ['wm-enable-binding-mode --name resize']
+    bindings: ['alt+s']
+
+  # Disables all keybindings until alt+shift+p is pressed again.
+  # - commands: ['wm-enable-binding-mode --name pause']
+  #   bindings: ['alt+shift+p']
+
+  # Change tiling direction. This determines where new tiling windows will
+  # be inserted.
+  - commands: ['toggle-tiling-direction']
+    bindings: ['ctrl+\']
+
+  # Change focus from tiling windows -> floating -> fullscreen.
+  - commands: ['wm-cycle-focus']
+    bindings: ['alt+z']
+
+  # Change the focused window to be floating.
+  - commands: ['toggle-floating --centered']
+    bindings: ['alt+\']
+
+  # Change the focused window to be tiling.
+  - commands: ['toggle-tiling']
+    bindings: ['ctrl+shift+\']
+
+  # Change the focused window to be fullscreen.
+  - commands: ['toggle-fullscreen']
+    bindings: ['alt+a']
+
+  # Minimize focused window.
+  # - commands: ['toggle-minimized']
+  #   bindings: ['Lwin+i']
+
+  # Close focused window.
+  - commands: ['close']
+    bindings: ['alt+q']
+
+  # Kill GlazeWM process safely.
+  - commands: ['wm-exit']
+    bindings: ['LWin+m']
+
+  # Re-evaluate configuration file.
+  - commands: ['wm-reload-config']
+    bindings: ['alt+shift+r']
+
+  # Redraw all windows.
+  - commands: ['wm-redraw']
+    bindings: ['alt+w']
+
+  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
+  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
+  # Terminal and Git Bash respectively.
+  - commands: ['shell-exec wt nu']
+    bindings: ['alt+enter']
+
+  # Focus the next/previous workspace defined in `workspaces` config.
+  - commands: ['focus --next-active-workspace']
+    bindings: ['ctrl+right']
+  - commands: ['focus --prev-active-workspace']
+    bindings: ['ctrl+left']
+
+  # Focus the workspace that last had focus.
+  - commands: ['focus --recent-workspace']
+    bindings: ['ctrl+up']
+
+  # Change focus to a workspace defined in `workspaces` config.
+  - commands: ['focus --workspace 1']
+    bindings: ['ctrl+NumPad1']
+  - commands: ['focus --workspace 2']
+    bindings: ['ctrl+NumPad2']
+  - commands: ['focus --workspace 3']
+    bindings: ['ctrl+NumPad3']
+  - commands: ['focus --workspace 4']
+    bindings: ['ctrl+NumPad4']
+  - commands: ['focus --workspace 5']
+    bindings: ['ctrl+NumPad5']
+  - commands: ['focus --workspace 6']
+    bindings: ['ctrl+NumPad6']
+  - commands: ['focus --workspace 7']
+    bindings: ['ctrl+NumPad7']
+  - commands: ['focus --workspace 8']
+    bindings: ['ctrl+NumPad8']
+  - commands: ['focus --workspace 9']
+    bindings: ['ctrl+NumPad9']
+
+  # Move the focused window's parent workspace to a monitor in a given
+  # direction.
+  - commands: ['move-workspace --direction left']
+    bindings: ['ctrl+shift+Left']
+  - commands: ['move-workspace --direction right']
+    bindings: ['ctrl+shift+Right']
+  - commands: ['move-workspace --direction up']
+    bindings: ['ctrl+shift+Up']
+  - commands: ['move-workspace --direction down']
+    bindings: ['ctrl+shift+Down']
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ['move --workspace 1', 'focus --workspace 1']
+    bindings: ['alt+NumPad1']
+  - commands: ['move --workspace 2', 'focus --workspace 2']
+    bindings: ['alt+NumPad2']
+  - commands: ['move --workspace 3', 'focus --workspace 3']
+    bindings: ['alt+NumPad3']
+  - commands: ['move --workspace 4', 'focus --workspace 4']
+    bindings: ['alt+NumPad4']
+  - commands: ['move --workspace 5', 'focus --workspace 5']
+    bindings: ['alt+NumPad5']
+  - commands: ['move --workspace 6', 'focus --workspace 6']
+    bindings: ['alt+NumPad6']
+  - commands: ['move --workspace 7', 'focus --workspace 7']
+    bindings: ['alt+NumPad7']
+  - commands: ['move --workspace 8', 'focus --workspace 8']
+    bindings: ['alt+NumPad8']
+  - commands: ['move --workspace 9', 'focus --workspace 9']
+    bindings: ['alt+NumPad9']
+
+
+  - commands: ["shell-exec wt nu"]
+    bindings: ["Alt+Enter"]
+  - commands: ["shell-exec wt yazi"]
+    bindings: ["Ctrl+LWin+Enter"]
+  - commands: ["shell-exec wt wsl -d Arch"]
+    bindings: ["Ctrl+Alt+Enter"]
+
+  - commands: ["focus --next-workspace"] 
+    bindings: ["Lwin+Right"]
+  - commands: ["focus --prev-workspace"] 
+    bindings: ["Lwin+Left"]
+
+  - commands: ["move --next-workspace","focus --next-workspace"] 
+    bindings: ["Ctrl+Lwin+Right"]
+  - commands: ["move --prev-workspace","focus --prev-workspace"] 
+    bindings: ["Ctrl+Lwin+Left"]
+
+  - commands: ["shell-exec --hide-window nu ~/script/clash.nu"]
+    bindings: ["Ctrl+Enter"]
+  - commands: ["shell-exec --hide-window powershell ~/script/keyviz-toggle.ps1"]
+    bindings: ["Lwin+k"]
+
+  - commands: ["shell-exec chrome"]
+    bindings: ["LWin+Enter"]
+
+  - commands: ["shell-exec pythonw C:/Users/wuruq/script/qtmv.py"]
+    bindings: ["LWin+Alt+Enter"]

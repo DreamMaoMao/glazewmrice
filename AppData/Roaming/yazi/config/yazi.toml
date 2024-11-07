@@ -1,0 +1,124 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+ratio          = [ 4, 11, 9 ]
+sort_by        = "extension"
+sort_sensitive = false
+sort_reverse 	 = false
+sort_dir_first = true
+sort_translit  = false
+linemode       = "none"
+show_hidden    = false
+show_symlink   = true
+scrolloff      = 0
+mouse_events   = [ "click", "scroll" ]
+title_format   = "Yazi: {cwd}"
+
+[preview]
+wrap            = "no"
+tab_size        = 2
+max_width       = 380
+max_height      = 430
+cache_dir       = ""
+image_delay     = 30
+image_filter    = "triangle"
+image_quality   = 75
+sixel_fraction  = 15
+ueberzug_scale  = 1
+ueberzug_offset = [ 0, 0, 0, 0 ]
+
+[opener]
+folder = [
+	{ run = 'code "%1"',    orphan = true, desc = "code",  for = "windows" },
+	{ run = '''nu -e "lazygit -p "%1""''', block = true,desc = "lazygit", for = "windows" },
+	{ run = 'nvim "%1"', desc = "nvim", block = true, for = "windows" },
+	{ run = 'wt nu -e "cd %1"', desc = "wt", for = "windows" },
+	{ run = '7z a file.zip "%1" -tzip', desc = "archive", for = "windows" },
+
+]
+edit = [
+	{ run = 'nvim "%1"', desc = "nvim", block = true, for = "windows" },
+	{ run = 'code "%1"',    orphan = true, desc = "code",  for = "windows" },
+]
+open = [
+	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+]
+reveal = [
+	{ run = 'explorer /select, "%1"', orphan = true, desc = "explorer", for = "windows" },
+]
+extract = [
+	{ run = 'ouch d "%1"', desc = "ouch Extract", for = "windows" },
+	{ run = '7z x "%1"', desc = "7z Extract", for = "windows" },
+]
+play = [
+	{ run = 'smplayer.exe "%1"', orphan = true, desc = "smplayer", for = "windows" },
+]
+
+[open]
+rules = [
+	{ name = "*/", use = [ "folder","reveal"] },
+
+	{ mime = "text/*",  use = [ "edit", "reveal" ] },
+	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "video/*", use = [ "play", "reveal" ] },
+	{ mime = "audio/*", use = [ "play", "reveal" ] },
+	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
+
+	{ mime = "application/json", use = [ "edit", "reveal" ] },
+	{ mime = "*/javascript",     use = [ "edit", "reveal" ] },
+
+	{ mime = "application/zip",             use = [ "extract", "reveal" ] },
+	{ mime = "application/gzip",            use = [ "extract", "reveal" ] },
+	{ mime = "application/x-tar",           use = [ "extract", "reveal" ] },
+	{ mime = "application/x-bzip",          use = [ "extract", "reveal" ] },
+	{ mime = "application/x-bzip2",         use = [ "extract", "reveal" ] },
+	{ mime = "application/x-7z-compressed", use = [ "extract", "reveal" ] },
+	{ mime = "application/x-rar",           use = [ "extract", "reveal" ] },
+	{ mime = "application/xz",              use = [ "extract", "reveal" ] },
+
+	{ mime = "*", use = [ "open", "reveal" ] },
+]
+
+[tasks]
+micro_workers    = 10
+macro_workers    = 25
+bizarre_retry    = 5
+image_alloc      = 536870912  # 512MB
+image_bound      = [ 0, 0 ]
+suppress_preload = false
+
+[log]
+enabled = true
+
+
+[plugin]
+fetchers = [
+	# Mimetype
+	{ id = "mime-ext", name = "*", run = "mime-ext", prio = "high" },
+	{ id = "git", name = "*", run = "git", prio = "normal" },
+	{ id = "git", name = "*/", run = "git", prio = "normal" },
+]
+
+prepend_previewers = [
+  { name = "*.epub", run = "epub" },
+  { mime = "video/*", run = "video-ffmpeg" },
+  { mime = "application/octet-stream", run = "video-ffmpeg" },
+]
+
+prepend_preloaders= [
+  # { name = "*.epub", run = "epub" },
+  # { mime = "video/*", run = "video-ffmpeg" },
+	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "disable" },
+	{ mime = "image/*", run = "disable" },
+	# Video
+	{ mime = "video/*", run = "disable" },
+	# PDF
+	{ mime = "application/pdf", run = "disable" },
+	# Font
+	{ mime = "font/*", run = "disable" },
+	{ mime = "application/vnd.ms-opentype", run = "disable" },
+]
+
+

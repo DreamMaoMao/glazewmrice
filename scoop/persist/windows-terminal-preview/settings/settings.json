@@ -1,0 +1,75 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+    "actions": [],
+    "alwaysShowTabs": false,
+    "confirmCloseAllTabs": false,
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "disableAnimations": true,
+    "keybindings": [],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "Dark+ (\u590d\u5236)",
+            "cursorShape": "bar",
+            "experimental.repositionCursorWithMouse": true,
+            "font": 
+            {
+                "face": "Maple Mono NF CN",
+                "size": 16
+            },
+            "opacity": 80
+        },
+        "list": 
+        [
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            }
+        ]
+    },
+    "rendering.graphicsAPI": "direct3d11",
+    "schemes": 
+    [
+        {
+            "background": "#1E1E1E",
+            "black": "#000000",
+            "blue": "#E8A713",
+            "brightBlack": "#666666",
+            "brightBlue": "#E3B631",
+            "brightCyan": "#A6DB49",
+            "brightGreen": "#6ED12B",
+            "brightPurple": "#E879E8",
+            "brightRed": "#F14C4C",
+            "brightWhite": "#E5DD9C",
+            "brightYellow": "#CCC11B",
+            "cursorColor": "#F7E389",
+            "cyan": "#EDCE00",
+            "foreground": "#CCC5AC",
+            "green": "#59BC3A",
+            "name": "Dark+ (\u590d\u5236)",
+            "purple": "#E899DF",
+            "red": "#CD3131",
+            "selectionBackground": "#C9C09A",
+            "white": "#E5CF85",
+            "yellow": "#E6A113"
+        }
+    ],
+    "showTabsInTitlebar": false,
+    "themes": []
+}

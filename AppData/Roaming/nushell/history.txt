@@ -1,0 +1,60 @@
+ls
+which tacky-borders
+ls
+ll
+ls
+rm nushell-ba\ -rf
+rm nushell-ba\ -r
+ls
+ll
+cd 
+ls
+ll
+ls
+ll
+ls
+ll
+ls -l
+ls
+ll -l
+ls -l
+ls
+ll
+ls
+yd 装饰
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ss fastfetch
+si scoop-cn/fashfetch
+si scoop-cn/fastfetch
+fastfetch.exe 
+winfetch.cmd 
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+yd 五彩缤纷的主题
+source ~/script/proxy.nu
+git clone https://github.com/DreamMaoMao/glazewmrice.git
