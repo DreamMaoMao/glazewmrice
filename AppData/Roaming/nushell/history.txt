@@ -161,3 +161,194 @@ ll
 ls
 ll
 ls
+ll
+ls
+source ~/script/proxy.nu
+git push
+yd 重现步奏，任意点开一个discord视频，然后点击右下角的全屏按钮全屏这个视频，然后按下esc退出全屏视频的播放，切换到其他工作区再切回来原来的工作区
+ls
+ll
+cargo build --release
+cargo format
+cargo fmt
+cargo build --release
+ls
+ll
+ls
+ll
+source ~/script/proxy.nu
+git push
+ls
+ll
+ls
+ll
+ls
+ls
+which glazewm
+glazewm command set-floating 
+glazewm command set-floating --centered
+glazewm command set-floating --centered --widht="900px"
+glazewm command set-floating --centered --width="900px"
+glazewm command set-floating --centered --width="1500px"
+glazewm command set-floating --centered --width="1500px" --height="900px"
+glazewm command set-floating --centered --width="1500px" --height="900px" --x-pos=10
+glazewm command set-floating --width="1500px" --height="900px" --x-pos=10
+glazewm command set-floating --width="1500px" --height="900px" --x-pos=10 --y-pos=10
+glazewm command set-floating --width="1500px" --height="900px" --x-pos=10 --y-pos=10 --centered
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+si scoop-cn/starship
+starship init nu | save -f ~/AppData/Roaming/nushell/
+cd  ~/AppData/Roaming/nushell
+ls
+starship init nu | save -f ~/.config/
+starship init nu | save -f ~/.config
+starship init nu | save -f $env.HOME/AppData/Roaming/nushell/
+starship init nu | save -f $env.APPDATA/nushell/
+cd $env.APPDATA/nushell/
+cd $env.APPDATA | path join 'nushell'
+cd $"($env.APPDATA)/nushell"
+starship init nu | save -f  $"($env.APPDATA)/nushell"
+starship init nu | save -f  ./
+starship init nu | save -f  $"($env.APPDATA)/nushell/starship.nu"
+use $"($env.APPDATA)/nushell/starship.nu"
+ls
+use starship.nu 
+ls
+use ($env.APPDATA)/nushell/starship.nu
+ls
+cd
+cd 
+cd D:/project/
+ls
+cd gj\
+ls
+ll
+cd ../
+cd rutoast\
+ls
+ll
+cd D:/project/
+ls
+cd rutoast\
+ls
+ll
+ls
+ll
+ls
+ll
+sd starship
+si scoop-cn/starship
+starship -h
+starship module git
+starship module --list
+starship module git_branch
+cd D:/project/
+starship module git_branch
+cd rutoast\
+starship module git_branch
+ls
+cd D:/project/
+cd rutoast\
+cd D:/project/
+cd rutoast\
+ls
+ll
+ls
+ls | where name == '.git'
+path exists .git
+path exists .git/
+path exists 
+path exists ./git
+path exists -h
+.git | path exists
+'.git' | path exists
+ls
+starship module --list
+starship module git_status git_status
+starship module git_status git_state
+starship module git_status 
+starship -h
+starship prompt
+l
+ls
+ll
+starship prompt
+starship config
+ls
+starship module --list
+starship module cmd_duration
+ls
+ll
+ls
+cd D:/project/
+cd rutoast\
+ls
+cd D:/project/rutoast/
+ls
+starship config
+starship module --list
+starship prompt
+cd D:/project/rutoast/
+starship prompt
+starship module git_status 
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+ll
+ls
+cd D:/project/rutoast/
+ls
+ll
+ls
+ll
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+echo $shell
+echo $env.shell
+echo $env.SHELL
+let nu_pid = (ps | where name == 'nu.exe' | get process_id)
+let nu_pid = (ps | where name == 'nu.exe' | get ppid)
+echo $nu_pid
+ps | where name == 'nu.exe'
+echo $nu.pid
+echo $nu.ppid
+echo $nu.pid
+let current_pid = $nu.pid
+let parent_pid = (wmic process where "ProcessId=$current_pid" get ParentProcessId | str trim)
+let parent_pid = (wmic process where "pid=$current_pid" get ppid | str trim)
+wmic process
+ps -o ppid= -p $nu.pid
+ps -h
+ps | where pid == $nu.pid | get ppid
+ps | where pid == $nu.ppid 
+ps | where pid == $nu.pid 
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+ll
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls
+cd D:/project/rutoast/
+ls

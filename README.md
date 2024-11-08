@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/7a23d181-fe36-42b8-ac98-cfc7c3360091
 
 # dependence
 ```pwsh
-scoop install 7zip bat bun ffmpeg fzf gcc git lazygit lsd neovim ripgrep vcredist2022 imagemagick flameshot yazi@0.3.3 nu keyviz popler windowsdesktop-runtime Maple-Mono-SC-NF JetBrains-Mono windows-terminal-preview autohotkey ouch
+scoop install 7zip bat bun ffmpeg fzf gcc git lazygit lsd neovim ripgrep vcredist2022 imagemagick flameshot yazi@0.3.3 nu keyviz popler windowsdesktop-runtime Maple-Mono-SC-NF JetBrains-Mono windows-terminal-preview autohotkey ouch starship
 
 ```
 # other dependence
