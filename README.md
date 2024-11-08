@@ -11,9 +11,10 @@ scoop install 7zip bat bun ffmpeg fzf gcc git lazygit lsd neovim ripgrep vcredis
 
 ```
 # other dependence
-1. [tacky-borders](https://github.com/lukeyou05/tacky-borders)
-2. (glazzewm >= 3.6)[https://github.com/glzr-io/glazewm] next-version,not release version
-3. zebar >= 2.4
+1. [tacky-borders](https://github.com/lukeyou05/tacky-borders) -- window border.
+2. [glazzewm >= 3.6](https://github.com/glzr-io/glazewm) next-version,not release version -- window manager.
+3. zebar >= 2.4 -- topbar.
+4. [rectify11](https://github.com/Rectify11/Installer) -- optimize window animation and avoid some window white-flash.
 
 # someting note
 1. first run ahk script, it will let you download d v1 version, just agree it.
