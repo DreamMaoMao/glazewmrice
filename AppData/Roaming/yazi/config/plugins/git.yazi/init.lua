@@ -193,9 +193,9 @@ local M = {
 
 		output = result.stdout
 		if output ~= nil and  output ~= "" then
-			local split_output = string_split(output:sub(1,-2),"/")
+			local split_output = string_split(output:sub(1,-2),"refs/heads/")
 			
-			git_branch = split_output[3]
+			git_branch = split_output[2]
 		elseif is_in_git_dir() then
 			git_branch = nil
 		else

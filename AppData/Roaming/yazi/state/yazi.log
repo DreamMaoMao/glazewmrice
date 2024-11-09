@@ -1380,3 +1380,156 @@ stack traceback:
   2024-11-05T05:34:18.982052Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
     at yazi-plugin\src\isolate\peek.rs:50
 
+  2024-11-05T08:17:49.812235Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-05T08:17:53.504509Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-05T08:18:00.500059Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T02:19:23.208885Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T02:26:02.493067Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T05:52:24.265332Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T05:54:24.829443Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T05:54:26.640917Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:11:09.312182Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:11:11.280699Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:31.297801Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:34.478060Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:34.700460Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:35.164387Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:35.342726Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:35.505666Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:36.040122Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:36.234911Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:36.436452Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:36.658127Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:37.216341Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:37.404827Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:37.595563Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:37.824226Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:38.010149Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:38.364358Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:38.553514Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:38.745099Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:38.942785Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:40.480059Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:40.673884Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:40.905994Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:41.140100Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T06:21:41.375237Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T07:47:31.807616Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-06T07:47:33.331541Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T13:54:49.924240Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:41:13.094501Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:41:14.043326Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:41:33.328223Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:55:42.522969Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:55:43.360595Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:59:29.024037Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T22:59:29.572064Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-07T23:59:53.214570Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T04:51:14.640018Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T04:51:19.750621Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T08:26:50.535882Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T10:36:18.038339Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T10:36:18.248884Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
+  2024-11-08T10:36:20.793047Z ERROR yazi_plugin::isolate::peek: RuntimeError("[string \"video-ffmpeg\"]:42: attempt to perform arithmetic on a nil value\nstack traceback:\n\t[string \"video-ffmpeg\"]:42: in method 'preload'\n\t[string \"video-ffmpeg\"]:5: in function <[string \"video-ffmpeg\"]:3>")
+    at yazi-plugin\src\isolate\peek.rs:50
+
