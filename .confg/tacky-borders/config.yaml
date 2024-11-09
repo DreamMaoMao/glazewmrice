@@ -1,9 +1,9 @@
 # Customize global config options
 global:
-    border_size: 4               # Width of the border
+    border_width: 4               # Width of the border
     border_offset: -1            # How close the border is to the window edges
     border_radius: -1            # Radius of the corners. Leave it at -1 to let tacky-borders handle the radius or set your own custom value.
-    active_color: "#a284bf"      # Color of the focused window. Currently supports a hex code like "#ffffff" or "accent"
+    active_color: "#ad741f"      # Color of the focused window. Currently supports a hex code like "#ffffff" or "accent"
     inactive_color: "#4c4947"    # Color of unfocused windows. Currently supports a hex code like "#ffffff" or "accent"
 
 
@@ -19,6 +19,10 @@ window_rules:
 
   - match: "Title"
     name: "Flow.Launcher"
+    enabled: false
+
+  - match: "Title"
+    name: "SMPlayer - 首选项"
     enabled: false
 
   - match: "Title"
