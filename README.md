@@ -15,6 +15,8 @@ scoop install 7zip bat bun ffmpeg fzf gcc git lazygit lsd neovim ripgrep vcredis
 2. [glazzewm >= 3.5](https://github.com/glzr-io/glazewm) -- window manager.
 3. zebar >= 2.4 -- topbar.
 4. [rectify11](https://github.com/Rectify11/Installer) -- optimize window animation and avoid some window white-flash.
+`you need to add the path that the tacky-borders.exe belong to Path env.`
+
 
 # someting note
 1. first run ahk script, it will let you download d v1 version, just agree it.
