@@ -1,11 +1,11 @@
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start Zebar.
-  startup_commands: ['shell-exec --hide-window powershell %HOMEPATH%/.glzr/start.ps1']
+  startup_commands: ['shell-exec %HOMEPATH%/.glzr/scripts/shellexec.exe  powershell %HOMEPATH%/.glzr/start.ps1']
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
-  shutdown_commands: ['shell-exec --hide-window powershell %HOMEPATH%/.glzr/exit.ps1']
+  shutdown_commands: ['shell-exec %HOMEPATH%/.glzr/scripts/shellexec.exe  powershell %HOMEPATH%/.glzr/exit.ps1']
 
   # Commands to run after the WM config is reloaded.
   config_reload_commands: []
@@ -74,8 +74,7 @@ window_behavior:
 
     fullscreen: # Maximize the window if possible. If the window doesn't have a maximize button, then it'll be fullscreen'ed normally instead. maximized: false
       # Whether to show fullscreen windows as always on top.
-      maximized: true
-      shown_on_top: true
+      shown_on_top: false
 
 workspaces:
   - name: '1'
@@ -108,8 +107,6 @@ window_rules:
       - window_title: { regex: '网易云音乐 安装' }
       - window_process: { regex: 'cloudmusic' }
         window_title: { regex: '正在安装' }
-      - window_process: { equals: 'Wiz' }
-        window_class: { regex: 'PerryShadowWnd' }
 
   - commands: ["set-floating --centered",]
     match:
@@ -117,10 +114,10 @@ window_rules:
       - window_title: { regex: 'qxdrag' }
         window_process: {regex: 'python'}
       - window_title: { regex: '云视频' }
+      - window_title: { regex: '为知笔记' }
       - window_process: { regex: 'aDrive' }
-      - window_title: { equals: 'Clash Verge' }
+      - window_title: { regex: 'Clash' }
       - window_title: { regex: '应用安装程序' }
-      - window_title: { regex: '新建任务面板' }
       - window_title: { equals: 'Translate' }
       - window_process: { regex: 'DownKyi' }
       - window_process: { regex: 'CHXSmartScreen' }
@@ -136,14 +133,7 @@ window_rules:
       - window_title: { regex: 'SMPlayer - 文件属性' }
 
 
-  - commands: ["set-floating --centered --width='1500px' --height='900px'"]
-    match:
-      - window_process: { regex: 'cloudmusic|QuarkCloudDrive' }
-
-  - commands: ["move --workspace 2","focus --workspace 2"]
-    match:
-      - window_process: { regex: 'Weixin' }
-  - commands: ["move --workspace 2","focus --workspace 2"]
+  - commands: ["move --workspace 3","focus --workspace 3"]
     match:
       - window_process: { regex: 'QQ' }
   - commands: ["move --workspace 4","focus --workspace 4"]
@@ -166,13 +156,13 @@ binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: 'resize'
     keybindings:
-      - commands: ['resize --width -1%']
+      - commands: ['resize --width -2%']
         bindings: ['h', 'left']
-      - commands: ['resize --width +1%']
+      - commands: ['resize --width +2%']
         bindings: ['l', 'right']
-      - commands: ['resize --height +1%']
+      - commands: ['resize --height +2%']
         bindings: ['k', 'up']
-      - commands: ['resize --height -1%']
+      - commands: ['resize --height -2%']
         bindings: ['j', 'down']
       # Press enter/escape to return to default keybindings.
       - commands: ['wm-disable-binding-mode --name resize']
@@ -207,20 +197,20 @@ keybindings:
     bindings: ['LWin+shift+down']
 
   # Resize focused window by a percentage or pixel amount.
-  # - commands: ['resize --width -1%']
-  #   bindings: ['alt+ctrl+left']
-  # - commands: ['resize --width +1%']
-  #   bindings: ['alt+ctrl+right']
-  # - commands: ['resize --height -1%']
-  #   bindings: ['alt+ctrl+up']
-  # - commands: ['resize --height +1%']
-  #   bindings: ['alt+ctrl+down']
+  - commands: ['resize --width -1%']
+    bindings: ['alt+ctrl+left']
+  - commands: ['resize --width +1%']
+    bindings: ['alt+ctrl+right']
+  - commands: ['resize --height -1%']
+    bindings: ['alt+ctrl+up']
+  - commands: ['resize --height +1%']
+    bindings: ['alt+ctrl+down']
 
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
-  - commands: ['wm-enable-binding-mode --name resize']
-    bindings: ['alt+s']
+  # - commands: ['wm-enable-binding-mode --name resize']
+  #   bindings: ['alt+r']
 
   # Disables all keybindings until alt+shift+p is pressed again.
   # - commands: ['wm-enable-binding-mode --name pause']
@@ -233,7 +223,7 @@ keybindings:
 
   # Change focus from tiling windows -> floating -> fullscreen.
   - commands: ['wm-cycle-focus']
-    bindings: ['alt+z']
+    bindings: ['ctrl+alt+\']
 
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
@@ -352,9 +342,9 @@ keybindings:
   - commands: ["move --prev-workspace","focus --prev-workspace"] 
     bindings: ["Ctrl+Lwin+Left"]
 
-  - commands: ["shell-exec --hide-window nu ~/script/clash.nu"]
+  - commands: ["shell-exec %HOMEPATH%/.glzr/scripts/shellexec.exe nu ~/script/clash.nu"]
     bindings: ["Ctrl+Enter"]
-  - commands: ["shell-exec --hide-window powershell ~/script/keyviz-toggle.ps1"]
+  - commands: ["shell-exec %HOMEPATH%/.glzr/scripts/shellexec.exe powershell ~/script/keyviz-toggle.ps1"]
     bindings: ["Lwin+k"]
 
   - commands: ["shell-exec chrome"]
