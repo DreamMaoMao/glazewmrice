@@ -12,7 +12,7 @@ scoop install 7zip bat bun ffmpeg fzf gcc git lazygit lsd neovim ripgrep vcredis
 ```
 # other dependence
 1. [tacky-borders](https://github.com/lukeyou05/tacky-borders) -- window border.
-2. [glazzewm >= 3.5](https://github.com/glzr-io/glazewm) -- window manager.
+2. [glazzewm >= 3.6](https://github.com/glzr-io/glazewm) -- window manager.
 3. zebar >= 2.4 -- topbar.
 4. [rectify11](https://github.com/Rectify11/Installer) -- optimize window animation and avoid some window white-flash.
 
