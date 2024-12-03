@@ -17,10 +17,10 @@ MouseGetPos, xpos, ypos
 ; CoordMode, Mouse ,Screen
 ;ToolTip,x:%xpos% y:%ypos% state:%state% flag:%flag% sin:%sin%
 if(state = "U" ){
-    if(ypos > 10 and xpos > 10){
+    if(ypos < 1070 and xpos > 10){
 		flag = 1
     }else if(flag = 1){
-		if(ypos <= 10 and xpos <= 10){
+		if(ypos >= 1070 and xpos <= 10){
 			flag = 0
 			Send #{Tab}
 			; MouseMove, xpos, ypos

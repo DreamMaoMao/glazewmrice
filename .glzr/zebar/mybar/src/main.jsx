@@ -18,6 +18,7 @@ const providers = zebar.createProviderGroup({
     date: { type: 'date', formatting: 'HH:mm' },
     battery: { type: 'battery' },
     memory: { type: 'memory',refreshInterval:2000 },
+    audio: { type: 'audio'},
 });
 
 createRoot(document.getElementById('root')).render(<App />);
@@ -30,7 +31,7 @@ function App() {
       providers.onOutput(() => setOutput(providers.outputMap));
     }, []);
 
-    const handleWheel = (event) => {
+    const handleWorkspaceWheel = (event) => {
       // rolldown
       if (event.deltaY > 0) {
         output.glazewm.runCommand(
@@ -39,6 +40,17 @@ function App() {
         //  rollup
         output.glazewm.runCommand(
           `focus --prev-active-workspace`)
+      }
+    };
+
+    const handleAudioWheel = (event) => {
+      let currentVolume = output.audio.defaultPlaybackDevice.volume;
+
+      // rolldown
+      if (event.deltaY > 0) {
+        output.audio.setVolume(currentVolume - 2)
+      } else if (event.deltaY < 0) {
+        output.audio.setVolume(currentVolume + 2)
       }
     };
 
@@ -257,8 +269,26 @@ function App() {
 
 
 
-          {output.glazewm && (
-            <div className="workspaces" onWheel={handleWheel}>
+          {
+          // show all workspace
+          // [...Array(9).keys()].map(index => {
+          //   const workspaceName = String(index + 1);
+          //   const workspace = output.glazewm?.currentWorkspaces.find(ws => ws.name === workspaceName);
+
+          //   return (
+          //     <button
+          //       className={`workspace ${!workspace ? 'empty' : `${workspace.hasFocus && 'focused'} ${workspace.isDisplayed && 'displayed'}`}`}
+          //       onClick={() => {
+          //           output.glazewm.runCommand(`focus --workspace ${workspaceName}`);
+          //       }}
+          //       key={workspaceName}
+          //     >
+          //       {workspaceName}
+          //     </button>
+          //   );
+          // })          
+          output.glazewm && (
+            <div className="workspaces" onWheel={handleWorkspaceWheel}>
               {output.glazewm.currentWorkspaces.map(workspace => (
                 <button
                   className={`workspace ${workspace.hasFocus && 'focused'} ${workspace.isDisplayed && 'displayed'}`}
@@ -273,7 +303,9 @@ function App() {
                 </button>
               ))}
             </div>
-          )}
+          )
+          
+          }
           </div>
 
         <div className="right">
@@ -349,6 +381,17 @@ function App() {
             >
               {Math.round(output.cpu?.usage)}%
             </span>
+          </button>
+
+          <button className="audio"
+          onClick={() =>
+                    output.glazewm.runCommand(
+                      `shell-exec --hide-window sysopr setting`,
+                    )
+                  }
+          onWheel={handleAudioWheel}
+          >📢
+            {Math.round(output.audio?.defaultPlaybackDevice?.volume)}%
           </button>
 
           {output.battery && (

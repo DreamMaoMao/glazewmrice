@@ -43,7 +43,8 @@ return
 #IfWinActive  ; non overview bind
 
 MButton::
-  Run, glazewm command toggle-fullscreen,,Hide
+  ; Run, glazewm command toggle-fullscreen,,Hide
+  Send {Blind}!{a}
 return
 
 
@@ -66,9 +67,27 @@ return
 
 
 #WheelUp::
-  Run, glazewm command focus --prev-active-workspace,,Hide
+  ; Run, glazewm command focus --prev-active-workspace,,Hide
+    Send {Blind}^{F12}
 return
 
 #WheelDown::
-  Run, glazewm command focus --next-active-workspace,,Hide
+  ; Run, glazewm command focus --next-active-workspace,,Hide
+    Send {Blind}^{F11}
 return
+
+
+!,::SendInput, {Volume_Down}	;Win+下降低音量
+!.::SendInput, {Volume_Up}		;Win+上升高音量
+^,::Brightness("-2") ; Reduces brightness by 1%
+^.::Brightness("+2") ; Increases brightness by 1% 
+
+Brightness(Offset) {
+    static wmi := ComObjGet("winmgmts:\\.\root\WMI")
+        , last := wmi.ExecQuery("SELECT * FROM WmiMonitorBrightness").ItemIndex(0).CurrentBrightness
+    level := Min(100, Max(1, last + Offset))
+    if (level != last) {
+        last := level
+        wmi.ExecQuery("SELECT * FROM WmiMonitorBrightnessMethods").ItemIndex(0).WmiSetBrightness(0, level)
+    }
+}

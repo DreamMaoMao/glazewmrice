@@ -26,15 +26,27 @@ general:
     # - 'window_focus': Jump when focus changes between windows.
     trigger: 'monitor_focus'
 
+  # How windows should be hidden when switching workspaces.
+  # - 'cloak': Recommended. Hides windows with no animation.
+  # - 'hide': Legacy method (v3.5 and earlier) that has a brief animation,
+  # but has stability issues with some apps.
+  hide_method: 'cloak'
+
+  # Affects which windows get shown in the native Windows taskbar. Has no
+  # effect if `hide_method: 'hide'`.
+  # - 'true': Show all windows (regardless of workspace).
+  # - 'false': Only show windows from the currently shown workspaces.
+  show_all_in_taskbar: true
+    
 gaps:
   # Gap between adjacent windows.
-  inner_gap: '10px'
+  inner_gap: '15px'
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '48px'
+    top: '50px'
     right: '10px'
-    bottom: '10px'
+    bottom: '12px'
     left: '10px'
 
 window_effects:
@@ -101,6 +113,7 @@ window_rules:
       # Ignore rules for various 3rd-party apps.
       - window_process: { equals: 'PowerToys.PowerAccent' }
       - window_process: { equals: 'keyviz' }
+      - window_process: { equals: 'Lightshot' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper*' }
       - window_process: { regex: 'uTools' }
@@ -117,7 +130,9 @@ window_rules:
       - window_title: { regex: 'qxdrag' }
         window_process: {regex: 'python'}
       - window_title: { regex: '云视频' }
+      - window_title: { regex: '打开图像' }
       - window_process: { regex: 'aDrive' }
+      - window_process: { regex: 'qView' }
       - window_title: { equals: 'Clash Verge' }
       - window_title: { regex: '应用安装程序' }
       - window_title: { regex: '新建任务面板' }
@@ -138,12 +153,12 @@ window_rules:
 
   - commands: ["set-floating --centered --width='1500px' --height='900px'"]
     match:
-      - window_process: { regex: 'cloudmusic|QuarkCloudDrive' }
+      - window_process: { regex: 'cloudmusic|QuarkCloudDrive|YesPlayMusic' }
 
   - commands: ["move --workspace 2","focus --workspace 2"]
     match:
       - window_process: { regex: 'Weixin' }
-  - commands: ["move --workspace 2","focus --workspace 2"]
+  - commands: ["move --workspace 3","focus --workspace 3"]
     match:
       - window_process: { regex: 'QQ' }
   - commands: ["move --workspace 4","focus --workspace 4"]
@@ -151,7 +166,7 @@ window_rules:
       - window_process: { regex: 'chrome' }
   - commands: ["move --workspace 5","focus --workspace 5"]
     match:
-      - window_process: { regex: 'cloudmusic' }
+      - window_process: { regex: 'cloudmusic|YesPlayMusic' }
   - commands: ["move --workspace 6","focus --workspace 6"]
     match:
       - window_process: { regex: 'obs64' }
@@ -279,7 +294,12 @@ keybindings:
   - commands: ['focus --prev-active-workspace']
     bindings: ['ctrl+left']
 
-  # Focus the workspace that last had focus.
+  - commands: ['focus --next-active-workspace']
+    bindings: ['ctrl+F11']
+  - commands: ['focus --prev-active-workspace']
+    bindings: ['ctrl+F12']
+
+    # Focus the workspace that last had focus.
   - commands: ['focus --recent-workspace']
     bindings: ['ctrl+up']
 
@@ -339,8 +359,8 @@ keybindings:
     bindings: ["Alt+Enter"]
   - commands: ["shell-exec wt yazi"]
     bindings: ["Ctrl+LWin+Enter"]
-  - commands: ["shell-exec wt wsl -d Arch"]
-    bindings: ["Ctrl+Alt+Enter"]
+  # - commands: ["shell-exec wt wsl -d Arch"]
+  #   bindings: ["Ctrl+Alt+Enter"]
 
   - commands: ["focus --next-workspace"] 
     bindings: ["Lwin+Right"]
